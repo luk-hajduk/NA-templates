@@ -1,14 +1,14 @@
 #include <vector>
 #include <list>
 
-#include <catch.hpp>
+#include <catch.hpp>//frameworkz  testami
 
 #include "implementation.h"
 
-TEST_CASE("size of vector", "[container_wrapper]")
+TEST_CASE("size of vector", "[container_wrapper]")//nazwa ,tag
 {
     container_wrapper<std::vector<int>> c1;
-    REQUIRE(c1.size() == 0);
+    REQUIRE(c1.size() == 0);//srawdza czy wartosc wyrazenia w  nawiasie jest prawdziwa jak nie to fail testu+ przerwanie testu i pokazuje jakie wartosci byly w tym rownanie...podobne do 	require 	jest 	check	 ale to nie przerywa testu , chociaz pokazuje argumenty tego porownania
 
     container_wrapper<std::vector<int>> c2 = std::vector<int>{ 1, 2, 3 };
     REQUIRE(c2.size() == 3);

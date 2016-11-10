@@ -22,7 +22,7 @@ struct is_any_of<T, T1, T2, T>: std::true_type
 
 #include<type_traits>
 
-template<typename T, typename T1, typename T2, typename T3>//tu tylko dodajemy disjunction ktore robi to co zestaw kilku alternatyw ||-----i 
+template<typename T, typename T1, typename T2, typename T3>//tu tylko dodajemy disjunction ktore robi to co zestaw kilku alternatyw ||
 struct is_any_of: std::disjunction<std::is_same<T,T1>, std::is_same<T,T2>, std::is_same<T,T3>>
 {
 };
@@ -31,8 +31,8 @@ struct is_any_of: std::disjunction<std::is_same<T,T1>, std::is_same<T,T2>, std::
 
 #include<type_traits>
 
-template<typename T, typename T1, typename T2, typename T3>//tu tylko dodajemy disjunction ktore robi to co zestaw kilku alternatyw ||-----i 
-struct is_any_of: std::constant_bool::value<std::is_same<T,T1> || std::is_same<T,T2> || std::is_same<T,T3>>
+template<typename T, typename T1, typename T2, typename T3>
+struct is_any_of: std::bool_constant<std::is_same<T,T1>::value || std::is_same<T,T2>::value || std::is_same<T,T3>::value>
 {
 };
 */

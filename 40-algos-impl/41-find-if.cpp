@@ -5,7 +5,7 @@
 TEST_CASE("successful find_if", "[algorithm]")
 {
     std::vector<int> data{ 1, 2, 3, 4 };
-    CHECK(training::find_if(data.begin(), data.end(), [](auto && elem){ return elem == 4; }) == data.begin() + 3);
+    CHECK(training::find_if(data.begin(), data.end(), [](auto && elem){ return elem == 4; }) == data.begin() + 3);//tu jest uzyte wyrazenie lambda[]-tu sie zaczyna , ()-argumenty {}-to jak dziala i co zwraca 
     CHECK(training::find_if(data.begin(), data.end(), [](auto && elem){ return elem == 1; }) == data.begin());
     CHECK(training::find_if(data.begin(), data.end(), [](auto && elem){ return elem == 5; }) == data.end());
 }

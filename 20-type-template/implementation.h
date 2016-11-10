@@ -32,7 +32,6 @@ T value;
 };
 */
 #pragma once
-
 #include<cstddef>
 #include<utility>
 #include<boost/optional.hpp>//dodalismy atego includa
@@ -48,18 +47,13 @@ container_wrapper( container_wrapper &&) = default;//konstruktor przesuwajacy
 container_wrapper & operator = (const container_wrapper &) = default;//operator  kopiujacy
 container_wrapper & operator = ( container_wrapper &&) = default;//operator  przesuwajacy
 
-
-
-
 std::size_t size() const{
 
 return value.size();
-
 }
 
-
-
 private:
+
 T value;
 
 
@@ -77,18 +71,13 @@ container_wrapper & operator = (const container_wrapper &) = default;//operator 
 container_wrapper & operator = ( container_wrapper &&) = default;//operator  przesuwajacy
 
 
-
-
 std::size_t size() const{
 
 return value  ? 1 : 0;//tu poprawialismy
-
 }
 
-
-
 private:
-boost::optional<T> value;
 
+boost::optional<T> value;
 
 };

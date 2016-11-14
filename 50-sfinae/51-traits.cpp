@@ -28,3 +28,4 @@ TEST_CASE("detect member variable", "[sfinae]")
     CHECK(has_member_variable<some_object_type>::value == true);
 }
 
+
